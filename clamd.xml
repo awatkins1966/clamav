@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+
+<service_bundle type="manifest" name="application/clamd">
+    <service version="1" type="service" name="application/clamd">
+
+               <dependency name='sendmail'
+                    grouping='optional_all'
+                    restart_on='none'
+                    type='service'>
+                    <service_fmri
+                        value='svc:/network/smtp:sendmail'/>
+                </dependency>
+
+       <method_context>
+                <method_credential user="clamav"/>
+       </method_context>
+
+        <exec_method timeout_seconds="120" type="method" name="start"
+            exec="/usr/lib/inet/clamd"/>
+
+        <exec_method timeout_seconds="120" type="method" name="stop"
+            exec=":kill"/>
+
+        <exec_method timeout_seconds="120" type="method" name="refresh"
+            exec=":true"/>
+
+        <instance enabled="false" name="default"/>
+    </service>
+</service_bundle>

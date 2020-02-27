@@ -1,0 +1,4 @@
+## Format( minutes  hours  day-of-month  month  day-of-week command
+#
+03 11 * * * find /var/spool/MD-Quarantine -name "qdir*" -type d -mtime +7 -exec rm -rf {} \;
+10 * * * * /usr/local/clamav/bin/freshclam --quiet
