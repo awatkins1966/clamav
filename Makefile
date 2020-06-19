@@ -26,7 +26,7 @@ COMPILER=gcc
 include ../../make-rules/shared-macros.mk
 
 COMPONENT_NAME=         clamav
-COMPONENT_VERSION=      0.101.3
+COMPONENT_VERSION=      0.102.3
 COMPONENT_SRC=          $(COMPONENT_NAME)-$(COMPONENT_VERSION)
 IPS_COMPONENT_VERSION=  $(COMPONENT_VERSION)
 BUILD_VERSION=          1
@@ -56,7 +56,7 @@ CONFIGURE_OPTIONS += --with-user=defang8
 CONFIGURE_OPTIONS += --with-group=nogroup
 CONFIGURE_OPTIONS += --enable-readdir_r
 CONFIGURE_OPTIONS += -enable-milter
-#CONFIGURE_OPTIONS += --enable-strni		# Not need for 0.101.3+
+#CONFIGURE_OPTIONS += --enable-strni
 CONFIGURE_OPTIONS += --sysconfdir=/etc/clamav
 CONFIGURE_OPTIONS += --with-dbdir=/var/clamav
 CONFIGURE_OPTIONS += --datarootdir=/var/clamav
@@ -68,8 +68,8 @@ CONFIGURE_OPTIONS += --sbindir=/usr/lib/inet
 #CONFIGURE_OPTIONS += --bindir=/usr/bin
 #CONFIGURE_OPTIONS += --libdir=/usr/lib/amd64
 
-COMPONENT_POST_BUILD_ACTION= \
-	(cd $(PROTO_DIR) ; $(MKDIR) -p var/spool/MIMEDefang var/clamav)
+#COMPONENT_POST_BUILD_ACTION= \
+#	(cd $(PROTO_DIR) ; $(MKDIR) -p var/spool/MIMEDefang var/clamav)
 
 TEST_TARGET= $(NO_TESTS)
 include $(WS_MAKE_RULES)/common.mk
@@ -86,4 +86,4 @@ REQUIRED_PACKAGES += web/curl
 REQUIRED_PACKAGES += library/ncurses
 REQUIRED_PACKAGES += library/libmilter
 REQUIRED_PACKAGES += system/library/math
-REQUIRED_PACKAGES += library/pcre 
+REQUIRED_PACKAGES += library/pcre2

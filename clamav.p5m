@@ -60,23 +60,26 @@ file path=usr/bin/freshclam
 file path=usr/bin/sigtool
 file path=usr/include/clamav-types.h
 file path=usr/include/clamav.h
-link path=usr/lib/$(MACH64)/libclamav.so target=libclamav.so.9.0.2
-link path=usr/lib/$(MACH64)/libclamav.so.9 target=libclamav.so.9.0.2
-file path=usr/lib/$(MACH64)/libclamav.so.9.0.2
+link path=usr/lib/$(MACH64)/libclamav.so target=libclamav.so.9.0.4
+link path=usr/lib/$(MACH64)/libclamav.so.9 target=libclamav.so.9.0.4
+file path=usr/lib/$(MACH64)/libclamav.so.9.0.4
 link path=usr/lib/$(MACH64)/libclammspack.so target=libclammspack.so.0.1.0
 link path=usr/lib/$(MACH64)/libclammspack.so.0 target=libclammspack.so.0.1.0
 file path=usr/lib/$(MACH64)/libclammspack.so.0.1.0
-link path=usr/lib/$(MACH64)/libclamunrar.so target=libclamunrar.so.9.0.2
-link path=usr/lib/$(MACH64)/libclamunrar.so.9 target=libclamunrar.so.9.0.2
-file path=usr/lib/$(MACH64)/libclamunrar.so.9.0.2
+link path=usr/lib/$(MACH64)/libclamunrar.so target=libclamunrar.so.9.0.4
+link path=usr/lib/$(MACH64)/libclamunrar.so.9 target=libclamunrar.so.9.0.4
+file path=usr/lib/$(MACH64)/libclamunrar.so.9.0.4
 link path=usr/lib/$(MACH64)/libclamunrar_iface.so \
-    target=libclamunrar_iface.so.9.0.2
+    target=libclamunrar_iface.so.9.0.4
 link path=usr/lib/$(MACH64)/libclamunrar_iface.so.9 \
-    target=libclamunrar_iface.so.9.0.2
-file path=usr/lib/$(MACH64)/libclamunrar_iface.so.9.0.2
+    target=libclamunrar_iface.so.9.0.4
+file path=usr/lib/$(MACH64)/libclamunrar_iface.so.9.0.4
+link path=usr/lib/$(MACH64)/libfreshclam.so target=libfreshclam.so.2.0.0
+link path=usr/lib/$(MACH64)/libfreshclam.so.2 target=libfreshclam.so.2.0.0
+file path=usr/lib/$(MACH64)/libfreshclam.so.2.0.0
 file path=usr/lib/$(MACH64)/pkgconfig/libclamav.pc
+file path=usr/lib/inet/clamav-milter
 file path=usr/lib/inet/clamd
-file path=usr/sbin/clamav-milter
 file path=usr/share/man/man1/clambc.1
 file path=usr/share/man/man1/clamconf.1
 file path=usr/share/man/man1/clamdscan.1
